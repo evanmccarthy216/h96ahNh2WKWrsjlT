@@ -3,11 +3,11 @@
 
 Predicting whether a customer is happy or unhappy based on their answers to a short delivery survey, and finding which survey questions actually matter.
 
-**Overview**
+# Overview
 
 A delivery company surveyed a group of customers with six questions, each answered on a scale of 1 (less) to 5 (more). Each customer was also labeled as happy (1) or unhappy (0).
 
-**The goals of this project was to:**
+# The goals of this project was to:
 
 Build a model that predicts customer happiness from survey answers
 Find the smallest set of questions that still predicts happiness well
@@ -27,7 +27,7 @@ X6	The app makes ordering easy for me
 
 The classes are fairly balanced: 69 happy (54.8%) and 57 unhappy (45.2%).
 
-**Approach**
+# Approach
 
 Exploratory analysis. I looked at the happy rate at each answer level for every question, plus a correlation heatmap. X1 and X5 showed the clearest relationship with happiness, X3 and X6 showed a moderate one, and X2 and X4 showed little to none.
 
@@ -39,7 +39,7 @@ Feature selection. Since there are only six questions, I tested all 63 possible 
 
 Tuning. I tuned decision trees, random forests, and KNN on the best feature sets with grid search.
 
-**Results**
+# Results
 
 Model	Features	CV accuracy
 Baseline (always guess happy)	none	54.8%
@@ -48,7 +48,7 @@ Decision Tree (depth 2)	X1, X5	66.6% ± 8.0%
 Decision Tree (depth 3)	X1, X5	67.9% ± 8.8%
 KNN (K = 7, Manhattan distance)	X1, X3, X5, X6	68.3% ± 9.4%
 
-**Key findings:**
+# Key findings:
 
 Fewer questions gave better results. Removing the weak questions raised accuracy by about 10 points. KNN went from 56% with all six questions to 68% after dropping X2 and X4.
 X1 (on-time delivery) is the most important question. It appeared in all 15 of the top-performing feature subsets.
@@ -57,7 +57,7 @@ About the 73% target
 
 Accuracy on individual test folds ranged from 50% to 84%, and about 32% of folds scored 73% or higher. A model evaluated on one lucky split could easily report 73%+, but the 50-fold average of about 67 to 68% is a more honest estimate of how the model will perform on new data.
 
-**Final model**
+# Final model
 
 I chose a depth-2 decision tree using X1 and X5. It performs within noise of the more complex models and reduces to one simple rule:
 
@@ -65,7 +65,7 @@ A customer is predicted happy if they rated on-time delivery 5 and courier satis
 
 This makes the model easy for an operations team to understand and act on without any code.
 
-**Survey Recommendations**
+# Survey Recommendations
 
 Keep X1 and X5. They carry most of the predictive power.
 Remove X2 (contents as expected). It showed no relationship with happiness or with any other question.
@@ -75,15 +75,15 @@ Business Takeaway
 
 Customer happiness depends mostly on the delivery experience. Customers are happy when their order arrives fully on time and the courier interaction goes well. Price and order contents matter much less. Improving delivery timeliness and courier quality is likely the most effective way to raise satisfaction.
 
-**Next Steps**
+# Next Steps
 
 Collect more survey responses. The small sample is the biggest limit on how reliably any model can be evaluated.
 Use nested cross-validation to get an unbiased estimate of the full feature selection and tuning process.
 
-**How to Run**
+# How to Run
 
 The notebook was built in Google Colab. The easiest way to run it is to open it in Colab and run all cells. The first cell downloads the dataset automatically.
 
-**Tools**
+# Tools
 
 Python, pandas, NumPy, scikit-learn, Matplotlib, seaborn, Google Colab
