@@ -12,17 +12,25 @@ A delivery company surveyed a group of customers with six questions, each answer
 Build a model that predicts customer happiness from survey answers
 Find the smallest set of questions that still predicts happiness well
 Recommend which questions could be removed from future surveys
-Data
+
+# Data
 
 126 survey responses, no missing values.
 
 Column	Description
+
 Y	Target: 0 = unhappy, 1 = happy
+
 X1	My order was delivered on time
+
 X2	Contents of my order was as I expected
+
 X3	I ordered everything I wanted to order
+
 X4	I paid a good price for my order
+
 X5	I am satisfied with my courier
+
 X6	The app makes ordering easy for me
 
 The classes are fairly balanced: 69 happy (54.8%) and 57 unhappy (45.2%).
