@@ -50,10 +50,15 @@ Tuning. I tuned decision trees, random forests, and KNN on the best feature sets
 # Results
 
 Model	Features	CV accuracy
+
 Baseline (always guess happy)	none	54.8%
+
 Best model using all features (Random Forest)	all 6	58.4% ± 8.1%
+
 Decision Tree (depth 2)	X1, X5	66.6% ± 8.0%
+
 Decision Tree (depth 3)	X1, X5	67.9% ± 8.8%
+
 KNN (K = 7, Manhattan distance)	X1, X3, X5, X6	68.3% ± 9.4%
 
 # Key findings:
