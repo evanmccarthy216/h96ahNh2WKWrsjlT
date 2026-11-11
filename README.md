@@ -35,17 +35,17 @@ The classes are fairly balanced: 69 happy (54.8%) and 57 unhappy (45.2%).
 
 # Approach
 
-Exploratory analysis. I looked at the happy rate at each answer level for every question, plus a correlation heatmap. X1 and X5 showed the clearest relationship with happiness, X3 and X6 showed a moderate one, and X2 and X4 showed little to none.
+Exploratory analysis: I looked at the happy rate at each answer level for every question, plus a correlation heatmap. X1 and X5 showed the clearest relationship with happiness, X3 and X6 showed a moderate one, and X2 and X4 showed little to none.
 
-Evaluation method. With only 126 rows, a single train/test split is unreliable (one customer changes the test accuracy by about 4 points). Every model was evaluated with repeated stratified 5-fold cross-validation (5 folds x 10 repeats = 50 test scores), and I report the mean and standard deviation.
+Evaluation method: With only 126 rows, a single train/test split is unreliable (one customer changes the test accuracy by about 4 points). Every model was evaluated with repeated stratified 5-fold cross-validation (5 folds x 10 repeats = 50 test scores), and I report the mean and standard deviation.
 
-Model comparison. I tested a majority-class baseline, logistic regression, decision tree, random forest, gradient boosting, SVM, naive Bayes, and KNN on all six questions.
+Model comparison: I tested a majority-class baseline, logistic regression, decision tree, random forest, gradient boosting, SVM, naive Bayes, and KNN on all six questions.
 
-Feature selection. Since there are only six questions, I tested all 63 possible combinations with three models instead of guessing which to drop.
+Feature selection: Since there are only six questions, I tested all 63 possible combinations with three models instead of guessing which to drop.
 
-Tuning. I tuned decision trees, random forests, and KNN on the best feature sets with grid search.
+Tuning: I tuned decision trees, random forests, and KNN on the best feature sets with grid search.
 
-# Results
+# Results:
 
 Model	Features	CV accuracy
 
