@@ -17,10 +17,6 @@ Recommend which questions could be removed from future surveys.
 
 # Data
 
-126 survey responses, no missing values.
-
-Column	Description
-
 Y	Target: 0 = unhappy, 1 = happy
 
 X1	My order was delivered on time
