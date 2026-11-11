@@ -1,5 +1,5 @@
 
-# Customer Satisfaction Prediction
+# Customer Happiness Prediction (Machine Learning)
 
 Predicting whether a customer is happy or unhappy based on their answers to a short delivery survey, and finding which survey questions actually matter.
 
