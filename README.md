@@ -9,9 +9,11 @@ A delivery company surveyed a group of customers with six questions, each answer
 
 # The goals of this project was to:
 
-Build a model that predicts customer happiness from survey answers
-Find the smallest set of questions that still predicts happiness well
-Recommend which questions could be removed from future surveys
+Build a model that predicts customer happiness from survey answers.
+
+Find the smallest set of questions that still predicts happiness well.
+
+Recommend which questions could be removed from future surveys.
 
 # Data
 
